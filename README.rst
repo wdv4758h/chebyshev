@@ -4,6 +4,13 @@ Chebyshev Approximation
 
 Give me a function, I'll give you a polynomial approximation.
 
+
+For actual use, consider implementation in the below links :
+
+* `NumPy - Chebyshev Module <http://docs.scipy.org/doc/numpy/reference/routines.polynomials.chebyshev.html>`_
+* `SymPy - Function approximation <http://docs.sympy.org/dev/modules/mpmath/calculus/approximation.html>`_
+
+
 Dependency
 ========================================
 
