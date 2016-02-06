@@ -96,7 +96,7 @@ if __name__ == '__main__':
 
     from math import sin, pi
 
-    f = chebyshev(sin, (0, pi/4), 6)
+    f = chebyshev(sin, (0, pi/4), 10)
 
     print("[formula        ]", f)
     print("[function result]", sin(0.7))
