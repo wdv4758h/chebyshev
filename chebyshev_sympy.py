@@ -2,6 +2,7 @@
 
 from sympy import symbols, cos, pi
 from sympy.core.numbers import One
+from sympy.utilities.lambdify import lambdify
 
 
 def chebyshev(func, interval, degree=7, precision=20):
@@ -86,7 +87,12 @@ def chebyshev(func, interval, degree=7, precision=20):
     for i in range(1, n):
         y += t[i] * c[i]
 
-    return y.subs({u: x_to_u}).simplify()
+    y = y.subs({u: x_to_u}).simplify()
+
+    f = lambdify(x, y)
+    f.formula = y
+
+    return f
 
 
 if __name__ == '__main__':
@@ -98,6 +104,6 @@ if __name__ == '__main__':
 
     f = chebyshev(sin, (0, pi/4), 10)
 
-    print("[formula        ]", f)
+    print("[formula        ]", f.formula)
     print("[function result]", sin(0.7))
-    print("[approxmation   ]", f.evalf(20, subs={'x': 0.7}))
+    print("[approxmation   ]", f(0.7))
