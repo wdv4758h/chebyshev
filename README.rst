@@ -8,7 +8,7 @@ Give me a function, I'll give you a polynomial approximation.
 For actual use, consider implementation in the below links :
 
 * `NumPy - Chebyshev Module <http://docs.scipy.org/doc/numpy/reference/routines.polynomials.chebyshev.html>`_
-* `SymPy - Function approximation <http://docs.sympy.org/dev/modules/mpmath/calculus/approximation.html>`_
+* `mpmath - Function approximation <http://mpmath.org/doc/current/calculus/approximation.html?highlight=chebyfit#mpmath.chebyfit>`_
 
 
 Dependency
@@ -51,14 +51,14 @@ look the example at the end of the ``chebyshev_sympy.py``
 Usage in Other Implementation
 ========================================
 
-SymPy - chebyfit
+mpmath - chebyfit
 ------------------------------
 
 .. code-block:: python
 
     # mpmath.chebyfit(ctx, f, interval, N, error=False)
 
-    from sympy.mpmath import mp, chebyfit, polyval
+    from mpmath import mp, chebyfit, polyval
     from math import sin, pi
 
     mp.pretty = True    # this will make "mpf('42.0')" display as "42.0"
